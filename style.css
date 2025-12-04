@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #ffe6f2; /* pink i lehtë */
+    margin-top: 30px;
+    color: #333;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #cc2e72;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 220px;
+    border-radius: 6px;
+    border: 2px solid #cc2e72;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    background: #cc2e72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e03b8b;
+}
+
+.letter-box {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    margin: 4px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.green { background-color: #6cc47f; }
+.gray  { background-color: #b1b1b1; }
+.red   { background-color: #e06b6b; }
+
+#keyboard {
+    margin-top: 25px;
+}
+
+.key {
+    display: inline-block;
+    margin: 4px;
+    padding: 10px 15px;
+    background: #fff;
+    border: 2px solid #cc2e72;
+    color: #cc2e72;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.key:hover {
+    background: #ffe6f2;
+}
+
+.key.disabled {
+    opacity: 0.5;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+}
+
+.win {
+    color: #2f8c4c;
+    animation: pop 0.6s ease;
+}
+
+.lose {
+    color: #d93a3a;
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    0% {transform: scale(0.6);}
+    100% {transform: scale(1);}
+}
+
+#stats {
+    margin-top: 20px;
+    font-size: 18px;
+}
