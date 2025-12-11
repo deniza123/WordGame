@@ -1,4 +1,3 @@
-// Fjalor 5-shkronjëshe (150+)
 const words = [
 "APPLE","HOUSE","TRAIN","PHONE","SHEET","BOARD","LIGHT","GREEN","MUSIC","WATER",
 "SOUND","WORDS","SMILE","GRASS","STONE","BRICK","CHAIR","TABLE","SHIRT","CLOUD",
@@ -64,8 +63,11 @@ function colorKeyboard(letter, colorClass) {
 
 function checkWord() {
     let guess = document.getElementById("guessInput").value.toUpperCase();
+
     if (guess.length !== 5) {
-        alert("Fjala duhet të ketë 5 shkronja!");
+        let input = document.getElementById("guessInput");
+        input.classList.add("shake");
+        setTimeout(() => input.classList.remove("shake"), 400);
         return;
     }
 
@@ -76,7 +78,10 @@ function checkWord() {
 
     for (let i = 0; i < 5; i++) {
         let box = document.createElement("div");
-        box.classList.add("letter-box");
+
+        box.classList.add("letter-box", "flip", "pop");
+        box.style.animationDelay = (i * 0.25) + "s";
+
         box.textContent = guess[i];
 
         if (guess[i] === secretWord[i]) {
